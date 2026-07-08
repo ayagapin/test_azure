@@ -1,0 +1,12 @@
+{
+  "name": "azure-free-app",
+  "version": "1.0.0",
+  "description": "Petit projet pour Azure App Service",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
