@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Projet Azure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Mon Premier Déploiement Azure !</h1>
+        <p>Ceci est un petit projet pour apprendre à déployer gratuitement sur Microsoft Azure.</p>
+        <button id="actionBtn">Cliquez-moi !</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        document.getElementById('actionBtn').addEventListener('click', () => {
+            document.getElementById('message').innerText = 'Félicitations, ça fonctionne ! 🎉';
+        });
+    </script>
+</body>
+</html>
