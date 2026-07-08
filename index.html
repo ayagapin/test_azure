@@ -11,11 +11,13 @@
         <h1>🚀 Mon Premier Déploiement Azure !</h1>
         <p>Ceci est un petit projet pour apprendre à déployer gratuitement sur Microsoft Azure.</p>
         <button id="actionBtn">Cliquez-moi !</button>
-        <p id="message"></p>
+        <p id="message">Nombre de clics : <span id="counter">0</span></p>
     </div>
     <script>
+        let count = 0;
         document.getElementById('actionBtn').addEventListener('click', () => {
-            document.getElementById('message').innerText = 'Félicitations, ça fonctionne ! 🎉';
+            count++;
+            document.getElementById('counter').innerText = count;
         });
     </script>
 </body>
