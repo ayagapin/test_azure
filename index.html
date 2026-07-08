@@ -12,6 +12,7 @@
         <p>Ceci est un petit projet pour apprendre à déployer gratuitement sur Microsoft Azure.</p>
         <button id="actionBtn">Cliquez-moi !</button>
         <p id="message">Nombre de clics : <span id="counter">0</span></p>
+        <p id="secretMessage" style="font-size: 0.9em; opacity: 0.8; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.2); padding-top: 10px;"></p>
     </div>
     <script>
         let count = 0;
@@ -19,6 +20,16 @@
             count++;
             document.getElementById('counter').innerText = count;
         });
+
+        // Récupère le message secret depuis notre API Node.js
+        fetch('/api/message')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('secretMessage').innerText = data.message;
+            })
+            .catch(error => {
+                document.getElementById('secretMessage').innerText = "Impossible de charger le message secret.";
+            });
     </script>
 </body>
 </html>
